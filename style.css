@@ -5,6 +5,7 @@
     scroll-behavior: smooth;
 }
 
+
 body {
     background-color: #292c3e;
     display: flex;
@@ -34,7 +35,6 @@ body {
     border-top-left-radius: 10px; 
     border-bottom-left-radius: 10px;
     border-right: 1px solid #191b25; 
-    z-index: 0.5;
 }
 
 .container .rightside {
@@ -126,7 +126,7 @@ body {
     position: relative;
     overflow: auto;
     height: calc(100% - 61px);
-    border-bottom-left-radius: 10px; 
+    border-bottom-left-radius: 10px;  
 }
 
 .chatlist .block {
@@ -163,9 +163,9 @@ body {
 .listhead h4 {
     padding: 15px;
     color: #fff;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Segoe UI,Frutiger,Frutiger Linotype,Dejavu Sans,Helvetica Neue,Arial,sans-serif; 
     font-weight: 400;
-    font-size: 16px;
+    font-size: 17px;
 }
 
 .listhead p {
@@ -173,13 +173,24 @@ body {
     position: fixed;
 }
 
+.listhead .date {
+    color: #a6a6a6;
+    margin-top: 15px;
+    margin-left: 21.7rem;
+    font-size: 12px;
+   font-family: Segoe UI,Frutiger,Frutiger Linotype,Dejavu Sans,Helvetica Neue,Arial,sans-serif; 
+}
+
 .listhead .time {
    color: #a6a6a6;
    margin-top: 15px;
+   font-size: 12px;
+   font-family: Segoe UI,Frutiger,Frutiger Linotype,Dejavu Sans,Helvetica Neue,Arial,sans-serif; 
 }
 
 .chatlist .block.unread .details .listhead .time {
     color: #06d755;
+    margin-left: 21.7rem;
 }
 
 .usermsg p {
@@ -188,7 +199,7 @@ body {
     color: #a6a6a6;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 400;
-    font-size: 13px;
+    font-size: 14px;
 }
 
 .usermsg {
@@ -196,7 +207,7 @@ body {
 }
 
 .usermsg b {
-    margin-left: 24rem;
+    margin-left: 23.1rem;
     background-color: #06d755;
     color: #000;
     min-width: 15px;
@@ -404,3 +415,6 @@ span {
     display: none;
     z-index: 998; 
 }
+
+
+
