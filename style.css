@@ -5,7 +5,6 @@
     scroll-behavior: smooth;
 }
 
-
 body {
     background-color: #292c3e;
     display: flex;
@@ -416,5 +415,78 @@ span {
     z-index: 998; 
 }
 
+.header-phone {
+    display: none;
+}
+
+/* Responsive */
+
+@media (max-width: 500px) {
+
+    .rightside {
+        display: none;
+    }
+
+    .leftside {
+        border-top-left-radius: 0; 
+        border-bottom-left-radius: 0;
+        border-radius: 0;
+      
+    }
+
+    .container {
+        border-top-left-radius: 0; 
+        border-bottom-left-radius: 0;
+        border-radius: 0;
+        height: 1000px;
+    }
+
+    .header-phone {
+        position: relative;
+        width: 100%;
+        height: 60px;
+        background-color: #1f2130;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 15px;
+    }
+
+    .header2-phone {
+        display: flex;
+        margin-left: -47px;
+    }
+
+    .nav_icons {
+        margin-right: 2.7rem;
+    }
+
+    .nav_icons li {
+        margin-left: 30px;
+    }
+    
+    .header2-phone button {
+        height: 60px;
+        width: 180px;
+        background-color: transparent;
+        border: none;
+        color: #fff;
+    }
+
+   
+
+    .chatbox1 {
+        display: none;
+    }
+
+    .chat_input {
+        display: none;
+    }
+
+    .header1 {
+        display: none;
+    }
 
 
+
+}
