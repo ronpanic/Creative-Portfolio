@@ -5,6 +5,10 @@
     scroll-behavior: smooth;
 }
 
+a {
+    text-decoration: none;
+}
+
 body {
     background-color: #292c3e;
     display: flex;
@@ -80,6 +84,31 @@ body {
     padding: 0 15px;
 }
 
+.settings {
+    margin-top: 15.5rem;
+    margin-right: -25rem;
+    background-color: #1a1c2c;
+    z-index: 999;
+    border-radius: 5px;
+}
+
+.settings button {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    padding: 7px 20px;
+    display: block;
+    color: #a6a6a6;
+    font-family: Segoe UI,Frutiger,Frutiger Linotype,Dejavu Sans,Helvetica Neue,Arial,sans-serif;
+    font-size: 15px;
+    text-align: left;
+}
+
+.settings button:hover {
+    background-color: #1e2033;
+}
+
 
 .userimg {
     position: relative;
@@ -110,7 +139,7 @@ body {
 
 .nav_icons li {
     display: flex;
-    margin-left: 15px;
+    margin-left: 30px;
     cursor: pointer;
     color: #aebac1;
     font-size: 1.4rem;
@@ -151,7 +180,7 @@ body {
 }
 
 .active {
-    background-color:  #1e202b;
+    background-color:  #1c1e2c;
 }
 
 .listhead {
@@ -421,6 +450,49 @@ span {
 
 /* Responsive */
 
+
+
+@media (max-width: 1480px) {
+
+    .date {
+        display: none;
+    }
+
+    .time {
+        display: none;
+    }
+
+    .usermsg b {
+        margin-left: 21rem;
+    }
+}
+
+@media (max-width: 1360px) {
+
+    .usermsg b {
+        margin-left: 19rem;
+    }
+}
+
+@media (max-width: 1235px) {
+
+    .usermsg b {
+        display: none;
+    }
+}
+
+
+@media (max-width: 1100px) {
+   
+    .details p {
+        display: none;
+    }
+
+    .rightside {
+        flex: 115% !important;
+    }
+}
+
 @media (max-width: 500px) {
 
     .rightside {
@@ -473,8 +545,6 @@ span {
         color: #fff;
     }
 
-   
-
     .chatbox1 {
         display: none;
     }
@@ -487,6 +557,11 @@ span {
         display: none;
     }
 
-
+    .usermsg b {
+        display: block;
+        margin-left: 25rem;
+        margin-top: -2rem;
+        text-align: center;
+    }
 
 }
