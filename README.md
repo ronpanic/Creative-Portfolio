@@ -1,4 +1,4 @@
-# Portfolio-2.0
+# Creative Portfolio
 Portfolio implemented in a chat
 
 I have 2 Portfolios, but the idea occurred to me to make a Portfolio inside as if it were a chat such as: Whatsapp, Discord, etc.
