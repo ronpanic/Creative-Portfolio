@@ -1,4 +1,5 @@
 const firstItems = document.querySelectorAll('.first');
+const header1 = document.querySelector('.header1');
 const header2 = document.querySelector('.header2');
 const chatbox1 = document.querySelector('.chatbox1');
 const chatbox2 = document.querySelector('.chatbox2');
@@ -12,15 +13,22 @@ const settingsItem = document.querySelector('.settings-item');
 const lenguageButton = document.querySelector('.lenguagebt'); 
 const changelengButton = document.querySelector('.changeleng');
 const lenguageButtons = document.querySelectorAll('.lenguagebt button');
+const chatbox3 = document.querySelector('.chatbox3');
+const header3 = document.querySelector('.header3');
+const aboutItems = document.querySelectorAll('.about');
 
 let chatbox2Overflow = 'auto';
 let ellipsisClicked = false; 
 let chatbClicked = false;
 let peopleClicked = false; 
 
+
+header1.style.display = '';
 header2.style.display = 'none';
 chatbox1.style.display = 'block';
 chatbox2.style.display = 'none';
+chatbox3.style.display = 'none';
+header3.style.display = 'none';
 settings.style.display = 'none';
 lenguageButton.style.display = 'none';
 
@@ -46,12 +54,29 @@ peopleIcon.addEventListener('click', () => {
     peopleIcon.style.padding = peopleClicked ? '4px' : '0';
 });
 
-firstItems.forEach(item => {
+
+aboutItems.forEach(item => {
     item.addEventListener('click', () => {
+        header1.style.display = 'none';
+        header2.style.display = 'none';
+        header3.style.display = '';
         chatbox1.style.display = 'none';
-        chatbox2.style.display = 'block';
+        chatbox2.style.display = 'none';
+        chatbox3.style.display = 'block';
     });
 });
+
+firstItems.forEach(item => {
+    item.addEventListener('click', () => {
+        header1.style.display = 'none';
+        header2.style.display = '';
+        header3.style.display = 'none';
+        chatbox1.style.display = 'none';
+        chatbox2.style.display = 'block';
+        chatbox3.style.display = 'none';
+    });
+});
+
 
 clickableImages.forEach(image => {
     image.addEventListener('click', () => {
@@ -75,7 +100,6 @@ changelengButton.addEventListener('click', () => {
     lenguageButton.style.backgroundColor = '#1a1c2c';
     lenguageButton.style.borderRadius = '5px';
 });
-
 
 lenguageButtons.forEach(button => {
     button.addEventListener('click', () => {

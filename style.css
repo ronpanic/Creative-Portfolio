@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -287,6 +289,126 @@ span {
     border-radius: 4px;
 }
 
+.chatbox1 h1 {
+    color: #5e6285;
+    font-size: 2.5rem;
+    text-align: center;
+    font-family: 'Rubik', sans-serif;
+    margin-top: -4rem;
+}
+
+.messageintro {
+    position: relative;
+    display: flex;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.messageintro p {
+    position: relative;
+    right: 0;
+    text-align: right;
+    max-width: 65%;
+    padding: 12px;
+    background-color: #dcf8c6;
+    border-radius: 10px;
+    font-size: 0.9em;
+    font-weight: 300;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.messageintro p::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -12px;
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(135deg, #dcf8c6 0%, #dcf8c6 50%, transparent 50%, transparent);
+}
+
+.messageintro p .span1 {
+    color: #000;
+    display: block;
+    margin-top: 5px;
+    font-size: 0.85em;
+    opacity: 0.5;
+}
+
+.my_messageintro {
+    margin-top: 3rem;
+    margin-left: -15rem;
+    justify-content: flex-end;
+}
+
+.other_messageintro {
+    justify-content: flex-start;
+    margin-left: 15rem;
+    max-width: 20rem;
+}
+
+.other_messageintro p {
+    background-color: #fff;
+    text-align: left;
+}
+
+.other_messageintro p::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -12px;
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(225deg, #fff 0%, #fff 50%, transparent 50%, transparent);
+}
+
+
+.iconlinks {
+    margin-left: 15rem;
+    margin-top: 5rem;
+    background-color: rgb(94, 98, 133,0.4);
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.iconlinks img {
+    width: 2rem;
+    margin-top: 8px;
+}
+
+.links {
+    display: flex;
+    margin-left: -3rem;
+    margin-top: -1rem;
+}
+
+.linkstext p {
+    color: #686161;
+    margin-left: -3.5rem;
+    margin-top: 20px;
+    width: 10rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.copy {
+    text-align: center;
+    margin-top: 9.9rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 100;
+    color: #686161;
+}
+
+
+
+.message1-container {
+    margin-top: 5rem;
+}
+
 .message {
     position: relative;
     display: flex;
@@ -396,6 +518,19 @@ span {
     padding: 0 15px;
 }
 
+.header3 {
+    position: relative;
+    width: 100%;
+    height: 60px;
+    background-color: #1f2130;
+    border-top-right-radius: 10px; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+}
+
+
 .chatbox2 {
     position: relative;
     width: 100%;
@@ -412,6 +547,25 @@ span {
     background-color: rgb(102, 102, 102,0.6);
     border-radius: 4px;
 }
+
+.chatbox3 {
+    position: relative;
+    width: 100%;
+    height: calc(100% - 120px);
+    padding: 50px;
+    overflow-y: auto;
+}
+
+.chatbox3::-webkit-scrollbar {
+    width: 7px;
+}
+
+.chatbox3::-webkit-scrollbar-thumb {
+    background-color: rgb(102, 102, 102,0.6);
+    border-radius: 4px;
+}
+
+
 
 .my_message p img {
     width: 25rem;
@@ -503,7 +657,6 @@ span {
         border-top-left-radius: 0; 
         border-bottom-left-radius: 0;
         border-radius: 0;
-      
     }
 
     .container {
