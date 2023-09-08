@@ -530,6 +530,18 @@ span {
     padding: 0 15px;
 }
 
+.header4 {
+    position: relative;
+    width: 100%;
+    height: 60px;
+    background-color: #1f2130;
+    border-top-right-radius: 10px; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+}
+
 
 .chatbox2 {
     position: relative;
@@ -565,9 +577,31 @@ span {
     border-radius: 4px;
 }
 
+.chatbox4 {
+    position: relative;
+    width: 100%;
+    height: calc(100% - 120px);
+    padding: 50px;
+    overflow-y: auto;
+}
+
+.chatbox4::-webkit-scrollbar {
+    width: 7px;
+}
+
+.chatbox4::-webkit-scrollbar-thumb {
+    background-color: rgb(102, 102, 102,0.6);
+    border-radius: 4px;
+}
+
 
 
 .my_message p img {
+    width: 25rem;
+    border-radius: 10px;
+}
+
+.other_message p img {
     width: 25rem;
     border-radius: 10px;
 }

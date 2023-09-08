@@ -1,8 +1,11 @@
 const firstItems = document.querySelectorAll('.first');
+const secondItems = document.querySelectorAll('.second');
 const header1 = document.querySelector('.header1');
 const header2 = document.querySelector('.header2');
 const chatbox1 = document.querySelector('.chatbox1');
 const chatbox2 = document.querySelector('.chatbox2');
+const chatbox3 = document.querySelector('.chatbox3');
+const chatbox4 = document.querySelector('.chatbox4');
 const clickableImages = document.querySelectorAll('.clickable-image');
 const overlay = document.getElementById('overlay');
 const settings = document.getElementById('settings');
@@ -13,8 +16,8 @@ const settingsItem = document.querySelector('.settings-item');
 const lenguageButton = document.querySelector('.lenguagebt'); 
 const changelengButton = document.querySelector('.changeleng');
 const lenguageButtons = document.querySelectorAll('.lenguagebt button');
-const chatbox3 = document.querySelector('.chatbox3');
 const header3 = document.querySelector('.header3');
+const header4 = document.querySelector('.header4');
 const aboutItems = document.querySelectorAll('.about');
 
 let chatbox2Overflow = 'auto';
@@ -28,7 +31,9 @@ header2.style.display = 'none';
 chatbox1.style.display = 'block';
 chatbox2.style.display = 'none';
 chatbox3.style.display = 'none';
+chatbox4.style.display = 'none';
 header3.style.display = 'none';
+header4.style.display = 'none';
 settings.style.display = 'none';
 lenguageButton.style.display = 'none';
 
@@ -60,9 +65,11 @@ aboutItems.forEach(item => {
         header1.style.display = 'none';
         header2.style.display = 'none';
         header3.style.display = '';
+        header4.style.display = 'none';
         chatbox1.style.display = 'none';
         chatbox2.style.display = 'none';
         chatbox3.style.display = 'block';
+        chatbox4.style.display = 'none';
     });
 });
 
@@ -71,25 +78,27 @@ firstItems.forEach(item => {
         header1.style.display = 'none';
         header2.style.display = '';
         header3.style.display = 'none';
+        header4.style.display = 'none';
         chatbox1.style.display = 'none';
         chatbox2.style.display = 'block';
         chatbox3.style.display = 'none';
+        chatbox4.style.display = 'none';
     });
 });
 
-
-clickableImages.forEach(image => {
-    image.addEventListener('click', () => {
-        if (overlay.style.display === 'block') {
-            overlay.style.display = 'none';
-            chatbox2Overflow = 'auto';
-        } else {
-            overlay.style.display = 'block';
-            chatbox2Overflow = 'hidden';
-        }
-        chatbox2.style.overflowY = chatbox2Overflow;
+secondItems.forEach(item => {
+    item.addEventListener('click', () => {
+        header1.style.display = 'none';
+        header2.style.display = 'none';
+        header3.style.display = 'none';
+        header4.style.display = '';
+        chatbox1.style.display = 'none';
+        chatbox2.style.display = 'none';
+        chatbox3.style.display = 'none';
+        chatbox4.style.display = 'block';
     });
 });
+
 
 changelengButton.addEventListener('click', () => {
     settingsItem.style.display = 'none';
