@@ -19,12 +19,15 @@ const lenguageButtons = document.querySelectorAll('.lenguagebt button');
 const header3 = document.querySelector('.header3');
 const header4 = document.querySelector('.header4');
 const aboutItems = document.querySelectorAll('.about');
+const bdark = document.querySelector('#color-page');
+const body = document.querySelector('body');
+const sunnyIcon = document.getElementById('sunny-icon');
+const moonIcon = document.getElementById('moon-icon');
 
 let chatbox2Overflow = 'auto';
 let ellipsisClicked = false; 
 let chatbClicked = false;
 let peopleClicked = false; 
-
 
 header1.style.display = '';
 header2.style.display = 'none';
@@ -36,6 +39,7 @@ header3.style.display = 'none';
 header4.style.display = 'none';
 settings.style.display = 'none';
 lenguageButton.style.display = 'none';
+sunnyIcon.style.display = 'none';
 
 ellipsis.addEventListener('click', () => {
     ellipsisClicked = !ellipsisClicked;
@@ -116,3 +120,41 @@ lenguageButtons.forEach(button => {
         settingsItem.style.display = 'block';
     });
 });
+
+// DARKMODE //
+
+sunnyIcon.addEventListener('click', () => {
+    sunnyIcon.style.display = 'none';
+    moonIcon.style.display = '';
+    localStorage.setItem('darkmode', 'false');
+});
+
+moonIcon.addEventListener('click', () => {
+    moonIcon.style.display = 'none';
+    sunnyIcon.style.display = '';
+    localStorage.setItem('darkmode', 'true'); 
+});
+
+load();
+
+bdark.addEventListener('click' , e =>{
+    body.classList.toggle('darkmode');
+    store(body.classList.contains('darkmode'));
+});
+
+
+function load() {
+    const darkmode = localStorage.getItem('darkmode');
+
+    if(!darkmode) {
+        store('false');
+    } else if(darkmode == 'true') {
+        body.classList.add('darkmode');
+        moonIcon.style.display = 'none';
+        sunnyIcon.style.display = '';
+    }
+}
+
+function store(value) {
+    localStorage.setItem('darkmode', value);
+}

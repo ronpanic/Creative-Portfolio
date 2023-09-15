@@ -18,6 +18,7 @@ body {
     align-items: center;
     min-height: 100vh;
     overflow: hidden;
+    transition: background-color 0.5s ease;
 }
 
 .container {
@@ -40,6 +41,7 @@ body {
     border-top-left-radius: 10px; 
     border-bottom-left-radius: 10px;
     border-right: 1px solid #191b25; 
+    user-select: none;
 }
 
 .container .rightside {
@@ -84,6 +86,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 0 15px;
+    user-select: none;
 }
 
 .settings {
@@ -179,6 +182,7 @@ body {
     height: 45px;
     overflow: hidden;
     border-radius: 50%;
+    margin-left: 5px;
 }
 
 .active {
@@ -516,6 +520,7 @@ span {
     justify-content: space-between;
     align-items: center;
     padding: 0 15px;
+    user-select: none;
 }
 
 .header3 {
@@ -528,6 +533,7 @@ span {
     justify-content: space-between;
     align-items: center;
     padding: 0 15px;
+    user-select: none;
 }
 
 .header4 {
@@ -540,6 +546,7 @@ span {
     justify-content: space-between;
     align-items: center;
     padding: 0 15px;
+    user-select: none;
 }
 
 
@@ -635,6 +642,136 @@ span {
 .header-phone {
     display: none;
 }
+
+
+.color-page {
+    position: absolute;
+    border-radius: 50%;
+    z-index: 9999;
+    left: 50px;
+    bottom: 38px;
+    cursor: pointer;
+}
+
+.color-page ion-icon {
+    font-size: 4rem;
+    color: #e2ccb2
+}
+
+
+
+body.darkmode,
+body.darkmode .container,
+body.darkmode .leftside,
+body.darkmode .rightside,
+body.darkmode .header,
+body.darkmode .header1,
+body.darkmode .header2,
+body.darkmode .header3,
+body.darkmode .header4,
+body.darkmode .chatlist,
+body.darkmode .header-phone,
+body.darkmode .settings,
+body.darkmode .lenguagebt {
+    background-color: #181818;
+    
+}
+
+body.darkmode .color-page ion-icon {
+    color: #fcd53f;
+}
+
+body.darkmode .leftside {
+    border-right: 1px solid #141316;;
+}
+
+body.darkmode .rightside {
+    border-left: 1px solid #141316;
+}
+
+
+body.darkmode .chatlist {
+    background-color: #212020;
+}
+
+body.darkmode .chat_input {
+    background-color: #212020;
+    transition: background-color 0.5s ease;
+}
+
+body.darkmode input {
+    background-color: #1a1818;
+    transition: background-color 0.5s ease;
+}
+
+body.darkmode .message p {
+    background-color: #3a4c57;
+    color: #fff;
+}
+
+body.darkmode .other_message p {
+    background-color: #163647;
+}
+
+body.darkmode .span1 {
+    color: #a6a6a6;
+}
+
+body.darkmode .message p::before {
+    background: linear-gradient(135deg, #3a4c57 0%, #3a4c57 50%, transparent 50%, transparent);
+}
+
+body.darkmode .other_message p::before  {
+    background: linear-gradient(225deg, #163647 0%, #163647 50%, transparent 50%, transparent);
+}
+
+body.darkmode .chatlist .block:hover,
+body.darkmode .settings-item button:hover {
+    background-color: #242323;
+}
+
+body.darkmode a {
+    color: #bdbaba;
+}
+
+body.darkmode a:hover {
+    color: #1a1c2c;
+}
+
+body.darkmode .iconlinks img {
+    filter: invert(1);
+}
+
+body.darkmode .iconlinks {
+    background-color: #212020;
+    transition: background-color 1s ease;
+}
+
+body.darkmode .messageintro p::before {
+    background: linear-gradient(135deg, #3a4c57 0%, #3a4c57 50%, transparent 50%, transparent);
+}
+
+
+body.darkmode .other_messageintro p::before {
+    background: linear-gradient(225deg, #163647 0%, #163647 50%, transparent 50%, transparent);
+}
+
+
+
+body.darkmode .messageintro p {
+    background-color: #3a4c57;
+    color: #fff;
+}
+
+body.darkmode .other_messageintro p {
+    background-color: #163647;
+    color: #fff;
+}
+
+
+
+
+
 
 /* Responsive */
 
@@ -752,3 +889,4 @@ span {
     }
 
 }
+
